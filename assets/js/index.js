@@ -255,6 +255,7 @@ historyTable.addEventListener("click", ev => {
           }).then((value) => {
             if(password==value){
               ev.target.parentNode.parentNode.remove();
+              localStorage.removeItem('history');
               swal("Product Successfuly Deleted ", {
                 icon: "success",
               });
